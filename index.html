@@ -7,24 +7,65 @@
     <title>Sign Up Form</title>
 </head>
 
+<style>
+    body {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .input-field input {
+        width: 95%;
+        padding: 10px;
+        margin-top: 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background: #f1f1f1;
+    }
+
+    .input-field input:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+    legend{
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .form-button input{
+        background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+    }
+</style>
+
 <body>
-    <header></header>
+    <header>
+        <h1 style="text-align: center;">Sign Up Form</h1>
+    </header>
     <main>
         <form>
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="text" placeholder="User Id">
-            <input type="email" placeholder="email">
-            <input type="password" placeholder="Password">
-            <input type="password" placeholder="Confirm Password">
+            <div class="input-field">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="User Id">
+                <input type="email" placeholder="email">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Password">
+            </div>
             <div>
-                <level>Select your gender</level>
+                <legend>Select your gender:-</legend>
                 <input type="radio" name="gender" value="Male" id="">
                 <level>Male</level>
                 <input type="radio" name="gender" value="FeMale" id="">
                 <level>Female</level>
             </div>
-            <div>
+            <div class="level-selector">
+                <legend>Check mark your qualification:-</legend>
                 <input type="checkbox" name="qualification" value="JSC" id="">
                 <level>JSC</level>
                 <input type="checkbox" name="qualification" value="SSC" id="">
@@ -37,6 +78,13 @@
                 <level>Degree</level>
                 <input type="checkbox" name="qualification" value="Bachelor" id="">
                 <level>Bachelor</level>
+            </div>
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+            <div class="form-button">
+                <input type="submit" value="Login">
+            <input type="reset" value="clear">
             </div>
         </form>
     </main>
